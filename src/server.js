@@ -25,7 +25,7 @@ app.get('/', (req,res) =>{
 });
 
 server.setTimeout(10 * 60 * 1000); // 10 min
-server.listen(config.port);
+server.listen(process.env.PORT || 8080);
 server.on('error', error => console.log(error));
 server.on('listening', () => console.log(`Listening at ${config.url}:${config.port}`));
 
