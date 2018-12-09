@@ -3,7 +3,7 @@ import bodyParser from 'body-parser';
 import React from 'react';
 
 import { renderToString } from 'react-dom/server';
-import App from "./Components/App.jsx";
+import App from "./components/App.jsx";
 import html from "./functions/html";
 // These three must be require()'d to be instrumented:
 const app = require('express')();
