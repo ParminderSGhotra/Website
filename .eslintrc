@@ -1,0 +1,23 @@
+{
+    "extends": "airbnb-base",
+    "parserOptions": {
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": false
+      }
+    },
+    "env": {
+      "browser": false,
+      "node": true,
+      "jest": true
+    },
+    "rules": {
+      "quotes": "off",
+      "strict": "off",
+      "no-console": "error",
+      "comma-dangle": "off",
+      "no-underscore-dangle": "off",
+      "function-paren-newline": "off",
+      "linebreak-style": 0
+    }
+  }

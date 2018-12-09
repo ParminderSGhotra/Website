@@ -1,0 +1,6 @@
+{
+    "presets": [
+      ["env","react"]
+    ],
+    "plugins": [["css-modules-transform"],["transform-react-jsx"], ["transform-es2015-modules-commonjs"]]
+}
