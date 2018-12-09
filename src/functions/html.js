@@ -8,12 +8,15 @@
 const Html = ({ body, title }) => `
   <!DOCTYPE html>
   <html>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
     <head>
       <title>${title}</title>
     </head>
     <body style="margin:0">
       <div id="app">${body}</div>
+
     </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   </html>
 `;
 
