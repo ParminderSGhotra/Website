@@ -28,9 +28,11 @@ app.get('/', (req,res) =>{
 });
 
 server.setTimeout(10 * 60 * 1000); // 10 min
-server.listen(process.env.PORT || 8080);
+let port = 3001;
+let url = "http://localhost"
+server.listen(port);
 server.on('error', error => console.log(error));
-server.on('listening', () => console.log(`Listening at ${config.url}:${config.port}`));
+server.on('listening', () => console.log(`Listening at ${url}:${port}`));
 
 process.on('uncaughtException', (error) => {
   console.log(error);
