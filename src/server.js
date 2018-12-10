@@ -5,6 +5,8 @@ import React from 'react';
 import { renderToString } from 'react-dom/server';
 import App from "./components/App.jsx";
 import html from "./functions/html";
+
+console.log('Entry Point');
 // These three must be require()'d to be instrumented:
 const app = require('express')();
 const http = require('http');
@@ -16,6 +18,7 @@ app.set('trust proxy', 1);
 
 const server = http.createServer(app);
 
+console.log('Starting the server');
 
 app.get('/', (req,res) =>{
   console.log(__dirname);
