@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon --watch . src tools --watch .env --ext js,.jsx --exec \"babel-node src/server.js\"",
-    "start":"\"node dist/main.js\"",
+    "start":"node dist/main.js",
     "build": "webpack --mode development"
   },
   "author": "Parminder Singh Ghotra",

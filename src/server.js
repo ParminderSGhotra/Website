@@ -28,7 +28,7 @@ app.get('/', (req,res) =>{
 });
 
 server.setTimeout(10 * 60 * 1000); // 10 min
-let port = 3001;
+let port = config.port || 8080;
 let url = "http://localhost"
 server.listen(port);
 server.on('error', error => console.log(error));
