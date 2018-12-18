@@ -4,12 +4,15 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-const clientConfig = {
-  entry: { main: './src/client/client.js' },
-  target: 'web', 
+const serverConfig = {
+  entry: { main: './src/server/server.js' },
+  target: 'node', 
+  node: {
+    __dirname: false
+  },
   output: {    
     path: path.resolve(__dirname, 'dist'),
-    filename: 'client.js'
+    filename: 'main.js'
   },
   module: {
     rules: [
@@ -21,23 +24,21 @@ const clientConfig = {
         }
       },
       {
-        test: /\.jsx?$/,
-        exclude: /node_modules/,
-        use: {
-          loader: "babel-loader"
-        }
-      },
-      {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
-        sideEffects : true
+        test: /\.s?css$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          "css-loader",
+          "sass-loader"
+        ]
       }
     ]
   },
   plugins: [
-    new HtmlWebpackPlugin({template: './src/client/index.ejs'})
+    new MiniCssExtractPlugin({
+      filename: "styles.css",
+    })
   ]
 };
 
 
-module.exports = [clientConfig]
+module.exports = [serverConfig]
