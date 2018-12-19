@@ -1,16 +1,27 @@
 import React, { Component } from 'react';
-import { Navbar} from "react-bootstrap";
+import { Nav, NavItem, Navbar, NavDropdown, MenuItem} from "react-bootstrap";
 import '../css/bootstrap.css';
 
 class NavigationHeader extends Component {
   render() {
     return (
-      <Navbar>
+      <Navbar inverse collapseOnSelect>
         <Navbar.Header>
           <Navbar.Brand>
-            <a href="#home">Family 1 Optical</a>
+            <a href="#brand">React-Bootstrap</a>
           </Navbar.Brand>
+          <Navbar.Toggle />
         </Navbar.Header>
+        <Navbar.Collapse>
+          <Nav>
+            <NavItem eventKey={1} href="#">
+              About Us
+            </NavItem>
+            <NavItem eventKey={2} href="#">
+              Contact Us
+            </NavItem>            
+          </Nav>
+        </Navbar.Collapse>
       </Navbar>
     );
   }
