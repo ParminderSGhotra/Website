@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Nav, NavItem, Navbar, NavDropdown, MenuItem} from "react-bootstrap";
 import { LinkContainer, IndexLinkContainer  } from 'react-router-bootstrap';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 class NavigationHeader extends Component {
   render() {
@@ -14,18 +14,18 @@ class NavigationHeader extends Component {
           <Navbar.Toggle />
         </Navbar.Header>
         <Navbar.Collapse>
-        <Nav>
-          <NavItem><Link to='/'>Home</Link></NavItem>
-          <NavItem><Link to='/about'>About</Link></NavItem>
-        </Nav>
-          {/* <Nav>
-            <IndexLinkContainer  to="/" href="/" >
-                <NavItem componentClass={Link}>Home</NavItem>
-            </IndexLinkContainer > 
+        {/* <Nav>
+          <NavItem><NavLink to='/'>Home</NavLink></NavItem>
+          <NavItem><NavLink to='/about'>About</NavLink></NavItem>
+        </Nav> */}
+          <Nav>
+            <LinkContainer  to="/" href="/" >
+                <NavItem>Home</NavItem>
+            </LinkContainer > 
             <LinkContainer to="/about" href="/about">
-                <NavItem componentClass={Link}>About</NavItem>
+                <NavItem>About</NavItem>
             </LinkContainer>           
-          </Nav> */}
+          </Nav>
         </Navbar.Collapse>
       </Navbar>
     );

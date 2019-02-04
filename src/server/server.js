@@ -30,28 +30,6 @@ app.post('/subscribeemailapi', (req, res) => {
 
 app.use('/', express.static(path.join(__dirname, './')));
 
-// app.get('/', (req,res) =>{
-
-//   const filePath = path.resolve(__dirname, './index.html');
-
-//     fs.readFile(filePath, 'utf8', (err, htmlData) => {
-//         if (err) {
-//             console.error('Opps, something went wrong: ', err);
-//             return res.status(404).end()
-//         }
-
-//          // render the app as a string
-//         const appComponent = renderToString(
-//             <App></App>
-//         );
-//   const htmlPage = htmlData.replace('<div id="root"></div>', `<div id="root">${appComponent}</div>`);
-//   // const reactBody = renderToString(<App/>);
-//   console.log(htmlPage);
-
-//   res.send(htmlPage);
-// });
-// });
-
 server.setTimeout(10 * 60 * 1000); // 10 min
 let port = config.port || 8081;
 let url = "http://localhost"

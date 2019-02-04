@@ -9,7 +9,8 @@ const clientConfig = {
   target: 'web', 
   output: {    
     path: path.resolve(__dirname, 'dist'),
-    filename: 'client.js'
+    filename: 'client.js',
+    // publicPath: '/'
   },
   module: {
     rules: [
@@ -33,6 +34,9 @@ const clientConfig = {
         sideEffects : true
       }
     ]
+  },
+  devServer: {
+    historyApiFallback: true,
   },
   plugins: [
     new HtmlWebpackPlugin({template: './src/client/index.ejs'})
