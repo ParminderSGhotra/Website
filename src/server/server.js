@@ -30,6 +30,7 @@ app.post('/subscribeemailapi', (req, res) => {
 
 app.use('/', express.static(path.join(__dirname, './')));
 
+
 server.setTimeout(10 * 60 * 1000); // 10 min
 let port = config.port || 8081;
 let url = "http://localhost"

@@ -3,7 +3,7 @@ import NavigationHeader from './NavigationHeader.jsx';
 import About from './About.jsx';
 import Contact from './Contact.jsx';
 import Home from './Home.jsx';
-import { Router, Route, Redirect, Switch, IndexRoute } from 'react-router-dom';
+import { BrowserRouter, Route, Redirect, Switch, IndexRoute } from 'react-router-dom';
 
 class App extends Component {  
   render() {
@@ -12,8 +12,8 @@ class App extends Component {
       {/* <BrowserRouter> */}
       <NavigationHeader></NavigationHeader>
       <Switch>
-        <Route path='/about'  component={About} />
-        <Route exact path='/' component={Home} />            
+        <Route exact path='/' component={Home} /> 
+        <Route path='/about'  component={About} />                   
       </Switch>
       {/* </BrowserRouter> */}
       </div>
