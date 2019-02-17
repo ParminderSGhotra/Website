@@ -19,6 +19,9 @@ class NavigationHeader extends Component {
             <IndexLinkContainer  to="/" href="/" >
                 <NavItem>Home</NavItem>
             </IndexLinkContainer > 
+            <LinkContainer to="/brands" href="/brands">
+                <NavItem>Brands</NavItem>
+            </LinkContainer>            
             <LinkContainer to="/about" href="/about">
                 <NavItem>About us</NavItem>
             </LinkContainer>
