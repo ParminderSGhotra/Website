@@ -10,6 +10,6 @@ ReactDOM.render(
     <BrowserRouter><App /></BrowserRouter>
       
   </AppContainer>,
-  document.getElementById('app')
+  document.getElementById('root')
 );
 }
