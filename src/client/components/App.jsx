@@ -12,15 +12,16 @@ class App extends Component {
     return (
       <div className="App">
       {/* <BrowserRouter> */}
-      <NavigationHeader></NavigationHeader>
       
+      <NavigationHeader></NavigationHeader>
+      <Hero></Hero>
       <Switch>
         <Route exact path="/" component={Home} /> 
         <Route path="/about"  component={About} />          
         <Route path="/contact"  component={Contact} />   
         <Route path="/brands"  component={Brands} />                                                     
       </Switch>
-      <Hero></Hero>
+      
       {/* </BrowserRouter> */}
       </div>
     );
