@@ -32,6 +32,14 @@ const clientConfig = {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
         sideEffects : true
+      },
+      {
+        test: /\.(png|jpg|gif|jpeg)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {},
+          }]
       }
     ]
   },
